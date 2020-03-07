@@ -25,7 +25,8 @@ func (f *RawString) GetParser(line []byte) LogParser {
 }
 
 func (f *RawString) GetSplitFunc() bufio.SplitFunc {
-	return f.rawStringScannerSplit
+	return nil
+	//return f.rawStringScannerSplit
 }
 
 func (f *RawString) rawStringScannerSplit(data []byte, atEOF bool) (advance int, token []byte, err error) {
